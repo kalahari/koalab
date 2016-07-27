@@ -10,4 +10,5 @@ RUN npm install --color false --quiet --global grunt-cli bower \
   && rm -rf config/* \
   && mv /tmp/server.json.docker config/server.json
 EXPOSE 8080
-CMD "node koalab.js"
+ENTRYPOINT [ "/usr/local/bin/node" ]
+CMD [ "./koalab.js" ]
