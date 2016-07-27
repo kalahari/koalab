@@ -23,6 +23,8 @@ module.exports = (grunt) ->
       'public/*.coffee'
     ]
     jshint:
+      options:
+        reporterOutput: ''
       front: ['assets/**/*.js']
       back: [
         'package.json'
