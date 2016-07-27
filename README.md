@@ -1,3 +1,5 @@
+> *This fork provides the Docker build for https://hub.docker.com/r/kalahari/koalab/*
+
 Koalab
 ======
 

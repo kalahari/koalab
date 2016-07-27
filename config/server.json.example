@@ -5,6 +5,7 @@
   ],
   "host": "localhost",
   "port": 8080,
+  "demo": false,
   "persona": {
     "audience": "http://localhost:8080"
   },
