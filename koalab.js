@@ -118,6 +118,7 @@ useSecret(function(secret) {
 
   var uri = process.env.MONGOLAB_URI ||
     process.env.MONGOHQ_URL ||
+    process.env.MONGO_URL ||
     config.mongodb.host + "/" + config.mongodb.database;
   var db = mongoose.createConnection(uri);
   db.on('error', function(err) {

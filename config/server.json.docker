@@ -1,0 +1,13 @@
+{
+  "authorized": [
+    "*@*"
+  ],
+  "port": 8080,
+  "persona": {
+    "audience": "http://localhost:8080"
+  },
+  "mongodb": {
+    "host": "localhost",
+    "database": "koalab"
+  }
+}
