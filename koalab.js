@@ -31,6 +31,9 @@ function abort() {
   if (config.authorized.join() == example.join()) {
     abort("Authorized is not configured in config/server.json");
   }
+  if (!config.host) {
+    abort("Host is not configured in config/server.json");
+  }
   if (!config.port) {
     abort("Port is not configured in config/server.json");
   }
@@ -125,11 +128,12 @@ useSecret(function(secret) {
     abort("Can't connect to mongodb: ", err);
   });
 
+  var host = process.env.HOST || config.host;
   var port = process.env.PORT || config.port;
   db.once('open', function () {
     require('./app/controller')(app, db, pass, config.demo);
-    app.listen(port, "localhost", function() {
-      console.log('Express server listening on port ' + port);
+    app.listen(port, host, function() {
+      console.log('Express server listening on ' + host + ':' + port);
     });
   });
 });

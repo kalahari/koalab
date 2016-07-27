@@ -3,6 +3,7 @@
     "example@example.net",
     "*@example.com"
   ],
+  "host": "localhost",
   "port": 8080,
   "persona": {
     "audience": "http://localhost:8080"
